@@ -1,0 +1,92 @@
+/* GENERAL */
+
+* {
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+
+/* CONTENEDOR */
+
+
+/* Cabecera */
+
+.global_header {
+    display: flex;
+    width: 940px;
+    height: 104px;
+    background: #171a21;
+    margin: 0 auto;
+}
+
+.container {
+    background: #171a21;
+}
+
+.logo {
+    float: left;
+    padding-top: 30px;
+    /* margin-right: 20px; */
+    width: 176px;
+    height: 44px;
+}
+
+.supernav_container {
+    display: flex;
+    /* align-items: baseline; */
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.content {
+    display: flex;
+    background: #171a21;
+}
+
+.menuitem {
+    display: block;
+    position: relative;
+    padding: 45px 7px 7px 7px;
+    line-height: 16px;
+    float: left;
+    font-size: 14px;
+    color: #b8b6b4;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menuitem:hover {
+    color: #66c0f4;
+}
+
+.global_action_menu {
+    vertical-align: top;
+    line-height: 24px;
+    vertical-align: top;
+    margin-left: auto;
+    margin-top: 5px;
+}
+
+.global_action_link,
+.global_action-btn-link {
+    text-decoration: none;
+    font-size: 11px;
+    margin-left: 7px;
+    color: #b8b6b4;
+}
+
+.global_action-btn-link {
+    padding: 5px 10px;
+    background-color: #5c7e10;
+    color: #cbdad5;
+}
+
+.global_action-btn-link:hover,
+.global_action_link:hover {
+    color: aliceblue;
+}
