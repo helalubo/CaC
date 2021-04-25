@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+/* El flex se pone al contenedor y luego trabajamos con los cajas.. nos lleva las una a lado de la otra */
+
+
+/* GENERALMENTE USAMOS FLEX Y FLEX WRAP EN EL CUERPO CONTENEDOR */
+
+.layout {
+    /* //PARTE 1 */
+    /* SE PUEDEN HACER COLUMNAS Y FILAS CON FLEXBOX */
+    display: flex;
+    /* PUEDO PASAR A COLUMNAS  */
+    /* flex-direction: column; */
+    /* NOS DA EL ORDEN EN LA FILA */
+    /* flex-direction: row-reverse; */
+    /* NOS DA EL ORDEN EN LA columna */
+    /* flex-direction: column-reverse */
+    /*si lo ponemos de esta manera entonces toma el width de su contenedor, como el body esta con center entonce se centra */
+    /* display: inline-flex; */
+    /* //////// */
+    /* //PARTE 2 */
+    /* SOLUCION DE CUANDO PONEMOS MUCHOS DIV Y LA LINEA SE SALE DE LA PANTALLA,
+    BAJAR ELEMENTOS ABAJO WRAP Y NOWRAP*/
+    /* flex-direction: row; */
+    /* LO QUE HACE WRAP ES MANDAR DIRECTAMENTE LAS CAJAS ABAJO SEGUN EL ANCHO DE LA PANTALLA  importante para cuerpo de pagina*/
+    /* flex-wrap: wrap; */
+    /* //FLEX-FLOW MESCA FLEX DIRECTION Y FLEX WRAP */
+    flex-flow: row wrap;
+    /* //gerales */
+    border: 3px solid black;
+    padding: 5px;
+    height: 600px;
+    align-items: flex-start;
+    /* LUEGO USAR ORDER EN CADA CAJA EN SI  */
+    /* EN LOS HIJOS SE USA FLEX-GROW PARA DECIRLE A CADA CAJA QUE DIMENSION QUIERO; */
+}
+
+
+/* //EN LA CAJA SE TRABAJA CON FLEXGROW, SI O SI EN SUS HIJOS */
+
+.caja {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+    border: 4px solid #222;
+    color: white;
+    background-color: grey;
+    /* //USO FLEX */
+    /* VALOR 1 = CADA ELEMENTO OCUPA EL MISMO ESPACIO (NO OLVIDAD QUE EL GROW HACE QUE SE ADAPTE, ESTA YA PUESTO PREVIAMENTE EN EL PADRE) */
+    /* esta propiedad indica que cuanto puede crecer una columna en grow */
+    /* los valores de grow se puede entender como una escala de prioridades */
+    /* flex-grow: 1; */
+    /* flex-basis: 25%; */
+    /* flex-basis: calc(100% / 3 - 68px); */
+}
+
+
+/* COMO USAR ORDER? ES SENSILLO, RECORDAR "EL QUE MENOR VALOR TENGA IRA PRIMERO" */
+
+
+/*Cuanto menor sea el valor antes se pondra*/
+
+
+/* LO QUE HACE FLEX-GROW ES DIVIDIR EL ESPACIO ENTRE TODOS LOS ELEMENTOS VIENDO UNA ESCALA DE PRIORIDADES */
+
+
+/* LO QUE HACE FLEX-SHRINK ES DECIR CUANDO QUIERO QUE UNA CAJA SEA MAS CHICA, LO MISMO QUE ESCALA DE VALORES , se usa si o si con flex-grow*/
+
+
+/* LO QUE HACE FLEX-BASIC E INDICA A CADA CAJA QUE TAMAÑO MINIMO VAN A TENER tambien podemos u
+usar calc() para hacer el calculo y asi darle un calculo de posicion a cada una que quiera.*/
+
+.red {
+    /* flex-grow: 25; */
+    /* width: 25%; */
+    background: red;
+    /* order: 3; */
+    align-self: flex-start;
+}
+
+.green {
+    background: green;
+    /* align-self: center; */
+    margin-top: 10%;
+    /* order: 4; */
+}
+
+.blue {
+    /* //RECORDAR, SI QUIERO PONER ESTA CAJA PRIMERO ENTONCES DEBO USAR EL ORDER -1, SE EMPIEZA A CONTAR DESDE -1 */
+    background: blue;
+    margin-top: 20%;
+    /* order: 1; */
+}
+
+.orange {
+    /* flex-grow: 0; */
+    background: orange;
+    /* order: 2; */
+    /* flex-shrink: 0;
+    order: -1;
+    flex-basis: 100%; */
+    align-self: flex-end;
+}
+
+
+/* como justificar contenidos en flex?  */
+
+
+/* RECORDAR QUE ESTE SE USA EN EL CONTENEDOR */
+
+.layout {
+    justify-content: center;
+}
