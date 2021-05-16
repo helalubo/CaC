@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.box {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    border: 1px solid red;
+    justify-content: start;
+    font-size: 40px;
+    color: yellow;
+    background-color: red;
+    margin: 10px 15px 0px 0px;
+}
+
+.black {
+    color: white;
+    background-color: black;
+}
