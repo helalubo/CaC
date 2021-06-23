@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./css/estilos.css">
     <title>CRM</title>
 
 </head>
@@ -252,7 +252,9 @@
 
 
 
-
+     <div id="subir__arriba">
+        <button  class="btn btn-primary fas fa-angle-up">Ir Arriba</button>
+    </div>
 
 
 
@@ -269,7 +271,7 @@
 
         </form>
 
-
+  
     </div>
 
     <!-- Footer -->
@@ -290,6 +292,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="funciones.js "></script>
     <script>
+        let caja = document.getElementById("subir__arriba");
+        caja.addEventListener("click", function() {
+            document.documentElement.scrollTop = 0;
+        })
+
+        window.addEventListener("scroll", function() {
+            if (document.documentElement.scrollTop > 0) {
+                caja.style.display = "flex"
+            } else {
+                caja.style.display = "none"
+            }
+        })
+
+
+
         $(document).ready(function() {
 
             new ClipboardJS('.btn');
