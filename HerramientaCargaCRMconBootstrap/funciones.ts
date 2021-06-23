@@ -1,3 +1,11 @@
+
+    window.onload = function () {
+
+          var firma = prompt("introduzca firma de operador: ");
+    }
+
+
+
 function ImprimirPorConsola():void{
 
     let txtNombre: any = document.getElementById("txtNombre");
@@ -59,6 +67,7 @@ function ImprimirPorConsola():void{
     rta += ObtenerSeleccionado(boniPrimaria);
     rta += ObtenerSeleccionado(tec);
     rta += ObtenerSeleccionado(resultado);
+    rta += ObtenerSeleccionado(firma);
 
 
 
