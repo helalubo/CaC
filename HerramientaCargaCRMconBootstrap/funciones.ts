@@ -1,8 +1,8 @@
 
-    window.onload = function () {
+    // window.onload = function () {
 
-          var firma = prompt("introduzca firma de operador: ");
-    }
+    //       var firma = prompt("introduzca firma de operador: ");
+    // }
 
 
 

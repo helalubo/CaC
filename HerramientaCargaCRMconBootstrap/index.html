@@ -252,10 +252,6 @@
 
 
 
-     <div id="subir__arriba">
-        <button  class="btn btn-primary fas fa-angle-up">Ir Arriba</button>
-    </div>
-
 
 
 
@@ -291,19 +287,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="funciones.js "></script>
+    <script src="jquery.scrollUp.js"></script>
     <script>
-        let caja = document.getElementById("subir__arriba");
-        caja.addEventListener("click", function() {
-            document.documentElement.scrollTop = 0;
-        })
-
-        window.addEventListener("scroll", function() {
-            if (document.documentElement.scrollTop > 0) {
-                caja.style.display = "flex"
-            } else {
-                caja.style.display = "none"
-            }
-        })
+     
 
 
 
