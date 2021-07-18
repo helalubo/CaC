@@ -1,4 +1,4 @@
-package web;
+package com.helalubo.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
