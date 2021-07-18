@@ -23,9 +23,9 @@ import com.helalubo.mook.venta.domain.venta;
 public class VentaRepository implements IVentaRepository {
 
     //// QUERYS
-    public static final String SQL_SELECT = "SELECT id, idComprador, idProducto, metodoDePago fecha FROM venta;";
+    public static final String SQL_SELECT = "SELECT id, idComprador, idProducto, metodoDePago, fecha FROM venta;";
 
-    public static final String SQL_INSERT = "INSERT INTO venta (idComprador, idProducto, metodoDePago, fecha) VALUES (?, ?, ?, ?);";
+    public static final String SQL_INSERT = "INSERT INTO venta (idComprador, idProducto, metodoDePago) VALUES (?, ?, ?);";
 
     public static final String SQL_DELETE = "delete from venta where id = ?;";
 
@@ -86,7 +86,7 @@ public class VentaRepository implements IVentaRepository {
             ps.setInt(1, venta.getIdUsuario());
             ps.setInt(2, venta.getIdProducto());
             ps.setString(3, venta.getMetodoDePago());
-            ps.setTimestamp(4, venta.getFecha());
+            // ps.setTimestamp(4, venta.getFecha());
 
             registros = ps.executeUpdate();
 
@@ -120,7 +120,7 @@ public class VentaRepository implements IVentaRepository {
             ps.setInt(1, venta.getIdUsuario());
             ps.setInt(2, venta.getIdProducto());
             ps.setString(3, venta.getMetodoDePago());
-            ps.setTimestamp(4, venta.getFecha());
+            // ps.setTimestamp(4, venta.getFecha());
 
             ps.setInt(5, venta.getId());
 
