@@ -1,7 +1,7 @@
 com\helalubo\mook\usuario\domain\usuario.class
+com\helalubo\controllers\HolaMundo.class
 com\helalubo\mook\producto\infrastructure\repositories\productoRepository.class
 com\helalubo\mook\venta\application\interfaces\IVentaService.class
-web\HolaMundo.class
 com\helalubo\mook\producto\application\interfaces\IProductoService.class
 com\helalubo\mook\producto\domain\producto.class
 com\helalubo\mook\usuario\application\interfaces\IUsuarioService.class
